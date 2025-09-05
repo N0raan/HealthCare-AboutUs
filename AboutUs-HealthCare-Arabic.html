@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About Us</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* align-items: center; */
+        /* align-content: center; */
+        /* background-color: #004aad; */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 100dvw;
+        height: auto;
+        text-align: center;
+
+    }
+
+    /* .Content{
+        background-color: white;
+        width: fit-content;
+        padding: 5%;
+        margin: 2%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10%;
+    } */
+
+    .Who-We-Are {
+        /* background-color: #004badd1 ; */
+        background-image: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+        border-radius: 2%;
+        padding: 2%;
+        overflow-x: hidden;
+        width: auto;
+        color: white;
+    }
+
+    .Who-We-Are h1 {
+        text-align: center;
+        overflow-x: hidden;
+    }
+
+    .Who-We-Are p {
+        text-align: center;
+        /* justify-content: space-around; */
+        overflow-x: hidden;
+    }
+
+    .Mission h1 {
+        text-align: center;
+    }
+
+    .Mission p {
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    #italic {
+        font-style: italic;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    .Mission-Sub {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+
+    /* From Uiverse.io by SouravBandyopadhyay */
+    .notification {
+        display: flex;
+        flex-direction: column;
+        isolation: isolate;
+        position: relative;
+        width: auto;
+        height: 20%;
+        background: #29292c;
+        border-radius: 1rem;
+        overflow: hidden;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 16px;
+        --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff);
+        --color: #32a6ff
+    }
+
+    .notification:before {
+        position: absolute;
+        content: "";
+        inset: 0.0625rem;
+        border-radius: 0.9375rem;
+        background: #18181b;
+        z-index: 2
+    }
+
+    .notification:after {
+        position: absolute;
+        content: "";
+        width: 0.25rem;
+        inset: 0.65rem auto 0.65rem 0.5rem;
+        border-radius: 0.125rem;
+        background: var(--gradient);
+        transition: transform 300ms ease;
+        z-index: 4;
+    }
+
+    .notification:hover:after {
+        transform: translateX(0.15rem)
+    }
+
+    .notititle {
+        color: var(--color);
+        padding: 0.65rem 0.25rem 0.4rem 1.25rem;
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: transform 300ms ease;
+        z-index: 5;
+    }
+
+    .notification:hover .notititle {
+        transform: translateX(0.15rem)
+    }
+
+    .notibody {
+        color: var(--color);
+        padding: 0.65rem 1.25rem 0.4rem 1.25rem;
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: transform 300ms ease;
+        z-index: 5;
+    }
+
+    .notification:hover .notibody {
+        transform: translateX(0.25rem)
+    }
+
+    .notiglow,
+    .notiborderglow {
+        position: absolute;
+        width: 20rem;
+        height: 20rem;
+        transform: translate(-50%, -50%);
+        background: radial-gradient(circle closest-side at center, white, transparent);
+        opacity: 0;
+        transition: opacity 300ms ease;
+    }
+
+    .notiglow {
+        z-index: 3;
+    }
+
+    .notiborderglow {
+        z-index: 1;
+    }
+
+    .notification:hover .notiglow {
+        opacity: 0.1
+    }
+
+    .notification:hover .notiborderglow {
+        opacity: 0.1
+    }
+
+    .note {
+        color: var(--color);
+        position: fixed;
+        top: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 0.9rem;
+        width: 75%;
+    }
+
+    p {
+        display: flex;
+    }
+
+
+    .Mission Container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Experience {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+                /* black layer with 60% opacity */
+                rgba(0, 0, 0, 0.6)),
+            url("img/Exp3.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 2%;
+        padding: 2%;
+        overflow-x: hidden;
+        color: white;
+
+    }
+
+    .Experience h1 {
+        text-align: center;
+    }
+
+    .Experience p {
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    .Choose-Us {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .Choose-Us h1 {
+        text-align: center;
+    }
+
+    .Choose-Us p {
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    .grid-container {
+        width: min(55rem, 100%);
+        margin-inline: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+        gap: 2rem;
+    }
+
+    .card {
+        --grad: red, blue;
+        padding: 2rem;
+        background-image: linear-gradient(to bottom left, #e0e4e5, #f2f6f9);
+        border-radius: 2rem;
+        gap: 1.5rem;
+        display: grid;
+        grid-template: 'title icon' 'content content' 'bar bar' / 1fr auto;
+        font-family: system-ui, sans-serif;
+        color: #444447;
+        box-shadow:
+            inset -2px 2px hsl(0 0 100% / 1),
+            -20px 20px 40px hsl(0 0 0 / .25);
+
+        .title {
+            font-size: 1.5rem;
+            grid-area: title;
+            align-self: end;
+            text-transform: uppercase;
+            font-weight: 500;
+            word-break: break-all;
+
+        }
+
+        .icon {
+            grid-area: icon;
+            font-size: 3rem;
+
+            >i {
+                color: transparent;
+                background: linear-gradient(to right, var(--grad));
+                background-clip: text;
+            }
+        }
+
+        .content {
+            grid-area: content;
+
+            &>*:first-child {
+                margin-top: 0rem
+            }
+
+            &>*:last-child {
+                margin-bottom: 0rem
+            }
+        }
+
+        &::after {
+            content: "";
+            grid-area: bar;
+            height: 2px;
+            background-image: linear-gradient(90deg, var(--grad));
+            /*     margin-inline: -1.5rem; */
+        }
+    }
+
+    #vision-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .Vision h1 {
+        text-align: center;
+    }
+
+    .Vision p {
+        text-align: center;
+        justify-content: space-around;
+        max-width: 70%;
+
+    }
+
+    #vision-image {
+        width: 80%;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 1rem;
+        margin-top: 1rem;
+        /* max-width: 40%; */
+    }
+
+
+    .Get-in-touch h1 {
+        text-align: center;
+    }
+
+    .Get-in-touch p {
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    #header-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        flex-direction: row;
+        padding: 0%;
+    }
+
+    #header-icons img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #translation {
+        display: flex;
+    align-items: flex-end; /* يخلي المحتوى يصطف في الأسفل */
+    gap: 8px; /* مسافة صغيرة بين الصورة والنص */
+}
+    
+    
+</style>
+
+<body>
+    <div id="translation">
+        <a href="index.html"> <img src="img/trans.png" alt="HealthCare To Go Logo"
+                style="width:50px;height:50px;"> Translate to English</a>
+        <p></p>
+    </div>
+    
+    <div class="Content">
+        <section class="Who-We-Are">
+            <h1>من نحن</h1>
+            <p>
+                بخبرة تمتد لأكثر من 20 عامًا في مجال الرعاية الصحية والرفاهية عبر الشرق الأوسط، نسعى دائمًا إلى تحسين
+                .جودة الحياة من خلال منتجات طبية موثوقة وآمنة<br>
+                بدأت رحلتنا برؤية واضحة: جعل الرعاية الصحية والراحة الشخصية في متناول كل بيت، بشكل أكثر سهولة وجودة.<br>
+                واليوم، نفتخر بأننا نضع هذه الخبرة بين يدي العائلة المصرية، لنقدم منتجات وخدمات تجمع بين الابتكار
+                والجودة والعناية.<br>
+            </p>
+
+        </section>
+
+        <div style="height: 2rem;"></div>
+
+        <section class="Mission">
+            <h1>رسالتنا</h1>
+            <div class="Mission-Sub">
+                <!-- From Uiverse.io by SouravBandyopadhyay -->
+                <div class="notification">
+                    <div class="notiglow"></div>
+                    <div class="notiborderglow"></div>
+                    <!-- <div class="notititle"></div> -->
+                    <div class="notibody">الراحة</div>
+                </div>
+
+                <div class="notification">
+                    <div class="notiglow"></div>
+                    <div class="notiborderglow"></div>
+                    <!-- <div class="notititle"></div> -->
+                    <div class="notibody">الصحة </div>
+                </div>
+
+                <div class="notification">
+                    <div class="notiglow"></div>
+                    <div class="notiborderglow"></div>
+                    <!-- <div class="notititle"></div> -->
+                    <div class="notibody">الرفاهية</div>
+                </div>
+            </div>
+
+            <p id="italic">لكل منزل في مصر<br></p>
+            <p>.لأننا نؤمن أن العناية ليست في المستشفيات والعيادات فقط، بل حق لكل فرد داخل منزله<br> </p>
+        </section>
+
+        <div style="height: 2rem;"></div>
+
+        <section class="Experience">
+            <h1>خبراتنا</h1>
+            <p>.أكثر من عقدين من الخبرة في الرعاية الصحية والرفاهية
+
+
+                .ثقة آلاف العائلات في دول مختلفة بالشرق الأوسط
+
+
+                .سجل حافل بالحلول الآمنة والفعّالة التي تلبي الاحتياجات اليومية للصحة والراحة
+                <br>
+            </p>
+        </section>
+
+        <div style="height: 2rem;"></div>
+
+        <section class="Choose-Us">
+            <h1>لماذا نحن؟</h1>
+
+            <div class="grid-container">
+                <div class="card">
+                    <div class="title">خبرة موثوقة</div>
+                    <div class="icon"><i class="fa-thin fa-laptop-code"></i></div>
+                    <div class="content">
+                        <p>.عقدان من الحلول المثبتة في مجال الرعاية الصحية والرفاهية</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title">راحة تصل إلى باب منزلك </div>
+                    <div class="icon"><i class="fa-thin fa-shield-check"></i></div>
+                    <div class="content">
+                        <p>.نحن نوصل مباشرةً إلى منزلك، أينما كنت في مصر</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title">منتجات مختارة بعناية</div>
+                    <div class="icon"><i class="fa-thin fa-wrench-simple"></i></div>
+                    <div class="content">
+                        <p>.كل منتج يتم اختياره بعناية لضمان السلامة والراحة والفوائد طويلة الأمد</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title"> فهم عميق لاحتياجات العائلة </div>
+                    <div class="icon"><i class="fa-thin fa-wrench-simple"></i></div>
+                    <div class="content">
+                        <p>.عملنا عبر منطقة الشرق الأوسط يمنحنا فهماً فريداً لاحتياجات الناس</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="height: 2rem;"></div>
+
+        <section class="Vision">
+            <h1>رؤيتنا</h1>
+            <div id="vision-content">
+                <p>نهدف إلى أن نصبح المزود الرائد لحلول الرعاية الصحية المنزلية والرفاهية في مصر، مع ضمان ألّا تضطر
+                    العائلات بعد الآن للتنازل عن الراحة أو الجودة.<br>
+                    .وعدُنا هو أن نقدّم الراحة إلى عتبة منزلك، لتعيش أنت وأحباؤك حياةً أكثر صحة وراحة<br>
+                </p>
+                <img id="vision-image" src="img/vision.jpg" alt="Vision Image">
+            </div>
+
+
+        </section>
+
+        <div style="height: 2rem;"></div>
+
+        <section class="Get-in-touch">
+            <div id="header-icons">
+                <h1>تواصل معنا</h1>
+                <a href=""> <img src="img/fb.png" alt="Facebook Icon"></i> </a>
+                <a href=""> <img src="img/ig.png" alt="Instagram Icon"></i> </a>
+                <a href=""> <img src="img/map.png" alt="Location Icon"></i> </a>
+            </div>
+            <p>فريقنا دائماً على استعداد لتقديم المساعدة.<br>
+                زرنا في مقرنا الرئيسي بالقاهرة، أو<br>
+                .اطلب عبر الإنترنت وتمتّع بخدمة توصيل سريعة إلى جميع محافظات مصر<br> </p>
+        </section>
+
+        <strong>.معنا، الرعاية الصحية والراحة أقرب إليك مما تتصور — في منزلك مباشرةً</strong>
+    </div>
+
+</body>
+
+</html>
