@@ -9,28 +9,35 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-        /* align-items: center; */
-        /* align-content: center; */
-        /* background-color: #004aad; */
+        flex-direction: column;        
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         width: 100dvw;
         height: auto;
 
     }
 
-    /* .Content{
+    .HeadBar {
+        width: 100dvw;
+        height: 60px;
         background-color: white;
-        width: fit-content;
-        padding: 5%;
-        margin: 2%;
-        justify-content: center;
+        display: flex;
         align-items: center;
-        border-radius: 10%;
-    } */
+        justify-content: flex-end;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    #translation {
+        display: flex;
+        align-items: flex-end;
+        /* يخلي المحتوى يصطف في الأسفل */
+        gap: 8px;
+        /* مسافة صغيرة بين الصورة والنص */
+        padding-right: 5%;
+    }
 
     .Who-We-Are {
-        /* background-color: #004badd1 ; */
         background-image: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
         border-radius: 2%;
         padding: 2%;
@@ -347,6 +354,13 @@
 </style>
 
 <body>
+
+    <div class="HeadBar">
+        <img id="Logo" src="img/logo.jpg" style="width:150px;height:50px; position: absolute; left: 20px;">
+        <a id="translation" href="index.html"> <img src="img/trans.png" style="width:20px;height:20px;"> Translate to English</a>
+        
+    </div>
+
     <div class="Content">
         <section class="Who-We-Are">
             <h1>Who We Are</h1>
@@ -464,8 +478,8 @@
         <section class="Get-in-touch">
            <div id="header-icons"> 
                 <h1>Get in Touch</h1>
-                <a href="https://www.facebook.com/profile.php?id=61577893899976"> <img src="img/fb.png" alt="Facebook Icon"></i> </a>
-                <a href="https://www.instagram.com/healthcare_eg?igsh=MXVzOXV6MWx5cnA4cw=="> <img src="img/ig.png" alt="Instagram Icon"></i> </a>
+                <a href=""> <img src="img/fb.png" alt="Facebook Icon"></i> </a>
+                <a href=""> <img src="img/ig.png" alt="Instagram Icon"></i> </a>
                 <a href=""> <img src="img/map.png" alt="Location Icon"></i> </a>
             </div>
             <p>Our team is always ready to help.<br>
@@ -473,14 +487,9 @@
                 Order online and enjoy fast delivery across all governorates in Egypt.<br> </p>
         </section>
 
-        <div style="height: 2rem;"></div>
-
         <strong>With us, healthcare and comfort are always closer than you think — right at your home.</strong>
     </div>
 
 </body>
 
 </html>
-
-
-
