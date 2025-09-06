@@ -20,15 +20,26 @@
 
     }
 
-    /* .Content{
+    .HeadBar {
+        width: 100dvw;
+        height: 60px;
         background-color: white;
-        width: fit-content;
-        padding: 5%;
-        margin: 2%;
-        justify-content: center;
+        display: flex;
         align-items: center;
-        border-radius: 10%;
-    } */
+        justify-content: flex-end;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    #translation {
+        display: flex;
+        align-items: flex-end;
+        /* يخلي المحتوى يصطف في الأسفل */
+        gap: 8px;
+        /* مسافة صغيرة بين الصورة والنص */
+        padding-right: 5%;
+    }
 
     .Who-We-Are {
         /* background-color: #004badd1 ; */
@@ -348,20 +359,20 @@
 
     #translation {
         display: flex;
-    align-items: flex-end; /* يخلي المحتوى يصطف في الأسفل */
-    gap: 8px; /* مسافة صغيرة بين الصورة والنص */
-}
-    
-    
+        align-items: flex-end;
+        /* يخلي المحتوى يصطف في الأسفل */
+        gap: 8px;
+        /* مسافة صغيرة بين الصورة والنص */
+    }
 </style>
 
 <body>
-    <div id="translation">
-        <a href="index-English.html"> <img src="img/trans.png" alt="HealthCare To Go Logo"
-                style="width:50px;height:50px;"> Translate to English</a>
-        <p></p>
+     <div class="HeadBar">
+        <img id="Logo" src="img/logo.jpg" style="width:150px;height:50px; position: absolute; left: 20px;">
+        <a id="translation" href="index-English.html"> <img src="img/trans.png" style="width:20px;height:20px;"> Translate to English</a>
+        
     </div>
-    
+
     <div class="Content">
         <section class="Who-We-Are">
             <h1>من نحن</h1>
@@ -497,4 +508,3 @@
 </body>
 
 </html>
-
